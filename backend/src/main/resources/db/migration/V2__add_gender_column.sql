@@ -1,0 +1,1 @@
+ALTER TABLE birth_charts ADD COLUMN gender VARCHAR(10); 

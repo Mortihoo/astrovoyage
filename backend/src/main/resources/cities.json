@@ -1,0 +1,30 @@
+{
+  "US": [
+    {"name": "New York", "lat": 40.7128, "lng": -74.0060},
+    {"name": "Los Angeles", "lat": 34.0522, "lng": -118.2437},
+    {"name": "Chicago", "lat": 41.8781, "lng": -87.6298},
+    {"name": "Houston", "lat": 29.7604, "lng": -95.3698},
+    {"name": "Phoenix", "lat": 33.4484, "lng": -112.0740}
+  ],
+  "GB": [
+    {"name": "London", "lat": 51.5074, "lng": -0.1278},
+    {"name": "Manchester", "lat": 53.4808, "lng": -2.2426},
+    {"name": "Birmingham", "lat": 52.4862, "lng": -1.8904},
+    {"name": "Glasgow", "lat": 55.8642, "lng": -4.2518},
+    {"name": "Liverpool", "lat": 53.4084, "lng": -2.9916}
+  ],
+  "CA": [
+    {"name": "Toronto", "lat": 43.6532, "lng": -79.3832},
+    {"name": "Vancouver", "lat": 49.2827, "lng": -123.1207},
+    {"name": "Montreal", "lat": 45.5017, "lng": -73.5673},
+    {"name": "Calgary", "lat": 51.0447, "lng": -114.0719},
+    {"name": "Ottawa", "lat": 45.4215, "lng": -75.6972}
+  ],
+  "AU": [
+    {"name": "Sydney", "lat": -33.8688, "lng": 151.2093},
+    {"name": "Melbourne", "lat": -37.8136, "lng": 144.9631},
+    {"name": "Brisbane", "lat": -27.4698, "lng": 153.0251},
+    {"name": "Perth", "lat": -31.9505, "lng": 115.8605},
+    {"name": "Adelaide", "lat": -34.9285, "lng": 138.6007}
+  ]
+} 
