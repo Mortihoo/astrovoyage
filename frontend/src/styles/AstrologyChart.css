@@ -1,0 +1,158 @@
+.astrology-chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 800px;
+}
+
+.chart {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.1),
+    inset 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.chart:hover {
+  transform: scale(1.02);
+}
+
+.chart canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.planet-positions {
+  flex: 0 0 300px;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.planet-positions h6 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.planet-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.planet-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+}
+
+.planet-table td:first-child {
+  font-size: 1.2rem;
+  color: #666;
+  width: 40px;
+  text-align: center;
+}
+
+.planet-table td:nth-child(2) {
+  font-weight: 500;
+  color: #444;
+}
+
+.planet-table td:last-child {
+  text-align: right;
+  color: #666;
+}
+
+.aspect-legend {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 0.5rem;
+}
+
+.aspect-legend h6 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.aspect-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.aspect-line {
+  width: 20px;
+  height: 2px;
+}
+
+.aspect-line.conjunction {
+  background: rgba(255, 0, 0, 0.8);
+}
+
+.aspect-line.opposition {
+  background: rgba(255, 0, 0, 0.6);
+  border-top: 1px dashed rgba(255, 0, 0, 0.6);
+}
+
+.aspect-line.trine {
+  background: rgba(0, 0, 255, 0.6);
+}
+
+.aspect-line.square {
+  background: rgba(255, 69, 0, 0.6);
+  border-top: 1px dotted rgba(255, 69, 0, 0.6);
+}
+
+.aspect-line.sextile {
+  background: rgba(0, 128, 0, 0.6);
+  border-top: 1px dashed rgba(0, 128, 0, 0.6);
+}
+
+@media (max-width: 1024px) {
+  .astrology-chart-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .planet-positions {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .astrology-chart-container {
+    padding: 1rem;
+  }
+
+  .chart-wrapper {
+    width: 100%;
+  }
+} 
