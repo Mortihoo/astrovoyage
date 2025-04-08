@@ -135,9 +135,9 @@ npm run build
 - Regular dependency updates
 
 ## 👥 Contributing
-Jinghao Mo
-Hongyu Jin
-Qian Tang
+- Jinghao Mo
+- Hongyu Jin
+- Qian Tang
 
 ---
 
