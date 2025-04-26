@@ -80,28 +80,98 @@ npm run build
 
 ## 🚀 Deployment
 
-### Production Deployment Checklist
+### 1. Docker Deployment
 
-1. Security Configuration
-   - Update JWT secret key
-   - Configure CORS policies
-   - Enable HTTPS
-   - Secure database credentials
+#### Prerequisites
+- Docker and Docker Compose installed
+- Configured environment variables
 
-2. Database Setup
-   - Create production database
-   - Configure connection pool
-   - Set up regular backups
+#### Environment Configuration
+Create a `.env` file in the root directory with the following variables:
+```env
+POSTGRES_DB=your_database_name
+POSTGRES_USER=your_database_user
+POSTGRES_PASSWORD=your_database_password
+JWT_SECRET=your_jwt_secret
+SPRING_PROFILES_ACTIVE=prod
+```
 
-3. Frontend Deployment
-   - Build production assets
-   - Configure API endpoints
-   - Deploy to web server
+#### Docker Services
+- Frontend: React application
+- Backend: Spring Boot application
+- Database: PostgreSQL
+- Nginx: Reverse proxy (optional)
 
-4. Backend Deployment
-   - Configure production properties
-   - Set up monitoring
-   - Configure logging
+#### Commands
+```bash
+# Build and start all services
+docker-compose up --build
+
+# Run in detached mode
+docker-compose up -d
+
+# Stop all services
+docker-compose down
+
+# Production deployment
+docker-compose -f docker-compose.prod.yml build
+docker-compose -f docker-compose.prod.yml up -d
+
+# Monitoring
+docker-compose logs -f
+docker-compose ps
+docker stats
+```
+
+### 2. Local Deployment
+
+#### Prerequisites
+- Node.js (v16 or higher)
+- JDK 17 or higher
+- Maven 3.6 or higher
+- PostgreSQL database server
+
+#### Backend Setup
+1. Configure Database
+```bash
+# Create PostgreSQL database and update application.properties with:
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_database_name
+spring.datasource.username=your_database_username
+spring.datasource.password=your_database_password
+```
+
+2. Build and Run
+```bash
+cd backend
+./mvnw clean package
+java -jar target/astrology-api-0.0.1-SNAPSHOT.jar
+```
+
+#### Frontend Setup
+1. Install Dependencies
+```bash
+cd frontend
+npm install
+```
+
+2. Start Development Server
+```bash
+npm start
+```
+
+3. Build for Production
+```bash
+npm run build
+```
+
+#### Security Checklist
+- Update JWT secret key
+- Configure CORS policies
+- Enable HTTPS
+- Secure database credentials
+- Configure production properties
+- Set up monitoring
+- Configure logging
 
 ## 🔍 Verification Steps
 
