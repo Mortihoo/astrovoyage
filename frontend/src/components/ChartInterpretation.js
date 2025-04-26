@@ -38,7 +38,7 @@ const ChartInterpretation = ({ chartData }) => {
     try {
       console.log('Sending request to backend with chartData:', chartData);
       // Call backend API for interpretation using axiosInstance
-      const response = await axiosInstance.post('/api/interpret', {
+      const response = await axiosInstance.post('/interpret', {
         question: input,
         chartData: {
           ...chartData,

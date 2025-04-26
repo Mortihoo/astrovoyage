@@ -1,10 +1,10 @@
 const config = {
-    API_BASE_URL: 'TODO_Your_Backend_Api',
+    API_BASE_URL: process.env.REACT_APP_API_URL || 'http://localhost:8080',
     API_ENDPOINTS: {
-        LOGIN: '/api/auth/login',
-        REGISTER: '/api/auth/register',
-        INTERPRET: '/api/interpret',
-        BIRTH_CHART: '/api/birth-chart'
+        LOGIN: '/auth/login',
+        REGISTER: '/auth/register',
+        INTERPRET: '/interpret',
+        BIRTH_CHART: '/birth-chart'
     }
 };
 

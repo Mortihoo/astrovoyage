@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
 
     const validateToken = async (token) => {
         try {
-            const response = await axios.get(`${config.API_BASE_URL}/api/auth/validate`, {
+            const response = await axios.get(`${config.API_BASE_URL}/auth/validate`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

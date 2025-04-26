@@ -55,7 +55,7 @@ const AstrologyPage = () => {
 
       // Save chart record
       try {
-        await axiosInstance.post('/api/chart-records', {
+        await axiosInstance.post('/chart-records', {
           name: formData.name,
           birthDateTime: formData.birthDateTime,
           location: formData.location,

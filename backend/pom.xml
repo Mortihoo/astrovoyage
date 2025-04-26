@@ -24,6 +24,33 @@
         <lombok.version>1.18.30</lombok.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>local-repo</id>
+            <url>file://${project.basedir}/lib</url>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>maven-central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -82,8 +109,6 @@
             <groupId>org.astrologer</groupId>
             <artifactId>swisseph</artifactId>
             <version>2.10.03</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/swisseph.jar</systemPath>
         </dependency>
         
         <!-- Spring Security -->
@@ -111,13 +136,6 @@
             <scope>runtime</scope>
         </dependency>
     </dependencies>
-
-    <repositories>
-        <repository>
-            <id>maven-central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-    </repositories>
 
     <build>
         <plugins>

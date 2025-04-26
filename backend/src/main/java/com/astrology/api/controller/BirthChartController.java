@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/birth-charts")
+@RequestMapping("/api/birth-charts")
 @CrossOrigin(origins = "#{appConfig.frontendUrl}")
 public class BirthChartController {
 

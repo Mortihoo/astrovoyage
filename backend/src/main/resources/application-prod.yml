@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+jwt:
+  secret: astrology-api-secret-key-2024-04-06
+  expiration: 86400000 # 24 hours in milliseconds
+
+# CORS configuration
+app:
+  frontend:
+    url: "http://localhost"
+  cors:
+    allowed-methods: "GET,POST,PUT,DELETE,OPTIONS"
+    allowed-headers: "Authorization,Content-Type,X-Requested-With,Accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers"
+    max-age: 3600 

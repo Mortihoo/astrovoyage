@@ -30,7 +30,7 @@ const ChartHistory = () => {
   const fetchChartRecords = async () => {
     try {
       setLoading(true);
-      const response = await axiosInstance.get('/api/chart-records');
+      const response = await axiosInstance.get('/chart-records');
       setRecords(response.data);
     } catch (err) {
       setError('Failed to fetch chart records');
@@ -42,7 +42,7 @@ const ChartHistory = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axiosInstance.delete(`/api/chart-records/${id}`);
+      await axiosInstance.delete(`/chart-records/${id}`);
       setRecords(records.filter(record => record.id !== id));
     } catch (err) {
       setError('Failed to delete chart record');
